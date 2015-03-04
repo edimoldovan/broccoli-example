@@ -1,0 +1,27 @@
+{
+  "name": "broccoli-sample-app",
+  "description": "Sample app for Broccoli",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Eduard Moldovan <edimoldovan@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "will be set"
+  },
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install"
+  },
+  "devDependencies": {
+    "bower": "*",
+    "broccoli": "*",
+    "broccoli-env": "*",
+    "broccoli-static-compiler": "*",
+    "broccoli-uglify-js": "*",
+    "broccoli-es6-concatenator": "*",
+    "broccoli-template": "*",
+    "broccoli-sass": "*",
+    "broccoli-merge-trees": "*",
+    "broccoli-bower": "*"
+  }
+}
