@@ -17,7 +17,7 @@ var app = pickFiles('app', {
 var styles = 'styles';
 styles = pickFiles(styles, {
 	srcDir: '/',
-	destDir: 'broccoli'
+	destDir: 'assets'
 });
 
 var vendor = 'vendor';
@@ -28,9 +28,14 @@ sourceTrees = sourceTrees.concat(findBowerTrees());
 
 var appAndDependencies = new mergeTrees(sourceTrees, { overwrite: true });
 
-var appJs = appAndDependencies;
+var appJs = compileES6(appAndDependencies, {
+  inputFiles: ['assets/**/*.js'],
+  legacyFilesToAppend: [
+  ],
+  outputFile: '/assets/app.js'
+});
 
-var appCss = compileSass(sourceTrees, 'broccoli/app.scss', 'assets/app.css');
+var appCss = compileSass(sourceTrees, 'assets/app.scss', 'assets/app.css');
 
 // if (env === 'development') {
 if (env === 'production') {

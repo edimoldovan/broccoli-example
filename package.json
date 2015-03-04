@@ -18,6 +18,7 @@
     "broccoli-env": "*",
     "broccoli-static-compiler": "*",
     "broccoli-uglify-js": "*",
+    "broccoli-es6-transpiler": "*",
     "broccoli-es6-concatenator": "*",
     "broccoli-template": "*",
     "broccoli-sass": "*",

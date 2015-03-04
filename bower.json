@@ -1,6 +1,5 @@
 {
   "name": "broccoli-sample-app",
   "dependencies": {
-    "jquery": "*"
   }
 }
